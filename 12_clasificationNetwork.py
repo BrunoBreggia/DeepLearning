@@ -12,6 +12,7 @@ class NeuralNet2(nn.Module):
         out = self.linear1(x)
         out = self.relu(out)
         out = self.linear2(out)
+        # no sigmoid because we use cross entropy loss (which already applies it)
         return out
 
 model = NeuralNet2(input_size=28*28, hidden_size=8, num_classes=3)
