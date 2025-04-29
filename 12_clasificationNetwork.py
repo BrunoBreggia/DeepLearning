@@ -18,3 +18,4 @@ class NeuralNet2(nn.Module):
 model = NeuralNet2(input_size=28*28, hidden_size=8, num_classes=3)
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(params=model.parameters(), lr=0.01)
+
