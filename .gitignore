@@ -1,5 +1,6 @@
 .venv/
 .idea/
+.data/MNIST/
 *.xml
 *.pdf
 *.png
