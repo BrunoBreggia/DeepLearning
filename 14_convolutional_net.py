@@ -68,7 +68,7 @@ optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
 
 # training loop
 n_total_steps = len(train_loader)
-for epoc in range(num_epochs):
+for epoch in range(num_epochs):
     for i, (raw_images, raw_labels) in enumerate(train_loader):
         # origin shape: [4, 3, 32, 32]
         # input_layer: 3 input channels, 6 output channels, 5 kernel size
@@ -85,7 +85,7 @@ for epoc in range(num_epochs):
         optimizer.step()
 
         if (i+1)%2000 == 0:
-            print(f"epoch: {i + 1}/{num_epochs}, step: {i}/{n_total_steps}, loss: {loss.item():.4f}")
+            print(f"epoch: {epoch + 1}/{num_epochs}, step: {i}/{n_total_steps}, loss: {loss.item():.4f}")
 
 print("Finished training")
 
