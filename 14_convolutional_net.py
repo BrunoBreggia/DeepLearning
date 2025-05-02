@@ -85,7 +85,7 @@ for epoch in range(num_epochs):
         optimizer.step()
 
         if (i+1)%2000 == 0:
-            print(f"epoch: {epoch + 1}/{num_epochs}, step: {i}/{n_total_steps}, loss: {loss.item():.4f}")
+            print(f"epoch: {epoch + 1}/{num_epochs}, step: {i+1}/{n_total_steps}, loss: {loss.item():.4f}")
 
 print("Finished training")
 
