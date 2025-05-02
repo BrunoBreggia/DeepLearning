@@ -16,7 +16,7 @@ n_epochs = 2
 batch_size = 100
 learning_rate = 0.001
 
-# MNIST
+# download MNIST datasets
 train_dataset = torchvision.datasets.MNIST(root="./data", 
                                            train=True, 
                                            transform=transforms.ToTensor(), 
@@ -25,7 +25,7 @@ train_dataset = torchvision.datasets.MNIST(root="./data",
 test_dataset = torchvision.datasets.MNIST(root="./data", 
                                           train=False, 
                                           transform=transforms.ToTensor())
-
+# create dataloaders
 train_loader = torch.utils.data.DataLoader(dataset=train_dataset, 
                                            batch_size=batch_size, 
                                            shuffle=True)
