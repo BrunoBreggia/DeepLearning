@@ -44,7 +44,7 @@ for i in range(6):
 plt.show()
 
 class NeuralNet(nn.Module):
-    def __init__(self, input_zie, hidden_size, num_classes):
+    def __init__(self, input_size, hidden_size, num_classes):
         super(NeuralNet, self).__init__()
         self.l1 = nn.Linear(input_size, hidden_size)
         self.relu = nn.ReLU()
@@ -78,7 +78,7 @@ for epoc in range(n_epochs):
         optimizer.step()
 
         if (i+1)% 100 == 0:
-            print(f"epoch: {i+1}/{n_epochs}, step: {i}/{n_total_steps}, loss{loss.item():.4f}")
+            print(f"epoch: {i+1}/{n_epochs}, step: {i}/{n_total_steps}, loss: {loss.item():.4f}")
 
 # testing
 with torch.no_grad():
