@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 import numpy as np
-from ray.train.examples.pytorch.torch_quick_start import num_samples
 from sklearn import datasets
 import matplotlib.pyplot as plt
 
