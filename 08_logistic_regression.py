@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 bc = datasets.load_breast_cancer()
 X, y = bc.data, bc.target
 n_sample, n_features = X.shape
-# print(n_sample, n_features)
+print(n_sample, n_features)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
 # print(X_train, X_test)
@@ -52,7 +52,7 @@ criterion = nn.BCELoss()  # Binary cross entropy loss
 optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)  # Stochastic Gradient Descent
 
 # 3) training loop
-num_epochs = 1000
+num_epochs = 100
 for epoch in range(num_epochs):
     # forward pass
     y_predicted = model(X_train)

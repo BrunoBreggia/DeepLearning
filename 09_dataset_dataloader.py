@@ -17,11 +17,12 @@ class WineDataset(Dataset):
     def __init__(self):
         # Load the data to memory
         xy = np.loadtxt('./data/wine.csv', delimiter=',', dtype=np.float32, skiprows=1)
-        self.x = torch.from_numpy(xy[:,1:])
-        self.y = torch.from_numpy(xy[:,[0]])
+        self.x = torch.from_numpy(xy[:,1:])  # features
+        self.y = torch.from_numpy(xy[:,[0]])  # labels
         self.n_samples = xy.shape[0]
 
     def __getitem__(self, index):
+        # returns (feature, label)
         return self.x[index], self.y[index]
 
     def __len__(self):
