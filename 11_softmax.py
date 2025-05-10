@@ -29,7 +29,7 @@ def cross_entropy(y_predicted, y_actual):
 # if class 0: [1 0 0]
 # if class 1: [0 1 0]
 # if class 2: [0 0 1]
-Y = np.array([1,0,0])
+Y = np.array([1,0,0]) # one sample
 
 Y_pred_good = np.array([0.7, 0.2, 0.1])
 Y_pred_bad = np.array([0.1, 0.3, 0.6])
@@ -45,7 +45,7 @@ loss = nn.CrossEntropyLoss()  # internally applies softmax
 # if class 0: [0]
 # if class 1: [1]
 # if class 2: [2]
-Y = torch.tensor([2, 0, 1])
+Y = torch.tensor([2, 0, 1]) # three samples
 
 # Dimension de salida de la red: n_samples x n_features = 1 x 3
 Y_pred_good = torch.tensor([[0.1, 1.0, 2.1], 

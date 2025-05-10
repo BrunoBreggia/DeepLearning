@@ -57,7 +57,7 @@ class NeuralNet(nn.Module):
         return out
     
 model = NeuralNet(input_size, hidden_size, n_classes)
-loss = criterion = nn.CrossEntropyLoss()
+criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
 # training loop
