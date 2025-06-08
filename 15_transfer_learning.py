@@ -1,7 +1,4 @@
 import torch
-from click.core import batch
-from ray.tune.examples.pbt_dcgan_mnist.common import batch_size
-from sympy.core.random import shuffle
 from torch import nn
 from torch import optim
 from torch.optim import lr_scheduler
